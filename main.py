@@ -21,8 +21,8 @@ from tempfile import NamedTemporaryFile
 # CONFIGURATION
 # ==============================
 
-TOKEN = "PUT_YOUR_BOT_TOKEN_HERE"
-BOT_PASSWORD = "PUT_YOUR_PASSWORD_HERE"
+TOKEN = "Telegram Bot Token"
+BOT_PASSWORD = "Bot Password"
 
 bot = telebot.TeleBot(TOKEN)
 OS = platform.system()  # 'Windows', 'Linux', 'Darwin'

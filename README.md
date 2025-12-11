@@ -1,5 +1,5 @@
 
-# remote-assist
+# PyRemote
 
 Control your computer from Telegram.  
 Cross-platform remote administration and automation tool for Windows, macOS, and Linux — built in Python.
@@ -25,7 +25,7 @@ Cross-platform remote administration and automation tool for Windows, macOS, and
 
 ## What is this
 
-`tele-admin-cross` is a Telegram bot that runs on a target machine and exposes a set of remote administration operations over Telegram. It is intended for legitimate remote administration, personal automation, and learning. The project demonstrates cross-platform handling of system-level tasks from Python.
+`PyRemote` is a Telegram bot that runs on a target machine and exposes a set of remote administration operations over Telegram. It is intended for legitimate remote administration, personal automation, and learning. The project demonstrates cross-platform handling of system-level tasks from Python.
 
 ---
 
@@ -62,8 +62,8 @@ Note: some features require extra packages or privileges:
 
 1. Clone the repo and pick a name:
    ```bash
-   git clone https://github.com/<your-username>/tele-admin-cross.git
-   cd tele-admin-cross
+   git clone https://github.com/ajit421/PyRemote.git
+   cd PyRemote
 
 
 2. Create a virtual environment and install:
@@ -75,7 +75,7 @@ Note: some features require extra packages or privileges:
    pip install -r requirements.txt
    ```
 
-3. Edit `tinar.py`:
+3. Edit `main.py`:
 
    * Set `TOKEN` to your Telegram bot token.
    * Set `BOT_PASSWORD` to a strong password you will use for `/auth`.
@@ -83,7 +83,7 @@ Note: some features require extra packages or privileges:
 4. Run:
 
    ```bash
-   python tinar.py
+   python main.py
    ```
 
 5. In Telegram, send:
@@ -117,7 +117,7 @@ Note: some features require extra packages or privileges:
 
 ## Architecture and how it works
 
-* A single Python process runs `tinar.py` and connects to the Telegram Bot API using `pyTelegramBotAPI`.
+* A single Python process runs `main.py` and connects to the Telegram Bot API using `pyTelegramBotAPI`.
 * Commands are processed via message handlers.
 * Cross-platform branching uses `platform.system()` to run OS-appropriate logic.
 * Screenshot and webcam use cross-platform libraries `mss` and `opencv-python`.

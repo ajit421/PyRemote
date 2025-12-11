@@ -18,7 +18,7 @@ Do
     If connected Then
         If pythonProcessID = 0 Then
             ' Run pythonw directly from venv's python.exe in hidden mode
-            cmd = """C:\Code\ThisIsNotRat\venv\Scripts\pythonw.exe"" ""C:\Code\ThisIsNotRat\tinar.py"""
+            cmd = """C:\Code\PyRemote\venv\Scripts\pythonw.exe"" ""C:\Code\PyRemote\main.py"""
             objShell.Run cmd, 0, False
             ' Unfortunately, objShell.Run doesn't return ProcessID, so pythonProcessID tracking is not possible here.
             ' The script will assume pythonw.exe is running when wifi is connected, and will attempt taskkill on pythonw.exe when disconnected instead.
